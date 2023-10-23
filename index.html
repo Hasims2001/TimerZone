@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Zone</title>
+    <style>
+      body {
+        text-align: center;
+        margin: 0.5rem 1rem;
+      }
+      .btn {
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        color: #fff;
+        cursor: pointer;
+      }
+      .flexRow {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem;
+      }
+      .saveDiv,
+      .started {
+        display: none;
+      }
+      #saveEdited,
+      .started {
+        margin: 1rem 0;
+      }
+      .saveDiv.show {
+        display: inline-block;
+      }
+      .flexRow.hide {
+        visibility: hidden;
+      }
+      #timerBox {
+        margin-top: 1rem;
+        text-align: left;
+        padding-left: 2rem;
+      }
+      #timerBox > div {
+        margin: 0.2rem 0;
+        font-size: 1rem;
+      }
+      input[type="number"] {
+        width: 50vw;
+      }
+      
+      
+      /* For Firefox */ 
+      progress::-moz-progress-bar { 
+            background: #4a9dff;  
+        } 
+  
+        /* For Chrome or Safari */ 
+        progress::-webkit-progress-value { 
+            background: #4a9dff; 
+        } 
+  
+        /* For IE10 */ 
+        progress { 
+            background: #4a9dff; 
+        } 
+    </style>
+  </head>
+  <body>
+    <h1>Timer Zone</h1>
+    <img src="./timerLogo.png" width="50%" />
+    <div id="timerBox">
+    </div>
+    <div class="flexRow">
+      <button
+        type="button"
+        id="start"
+        class="btn"
+        style="background-color: #4a9dff"
+      >
+        Start
+      </button>
+      <button
+        type="button"
+        id="edit"
+        class="btn"
+        style="background-color: #000"
+      >
+        Edit
+      </button>
+    </div>
+    <div class="started">
+      <button type="button" value="pause" id="pause" class="btn" style="background-color: #4a9dff">
+        Pause
+      </button>
+      <button type="button" id="cancel" class="btn" style="background-color: #000">
+        Cancel
+      </button>
+    </div>
+    <div class="saveDiv">
+      <button
+        type="button"
+        id="saveEdited"
+        class="btn"
+        style="background-color: #4a9dff"
+      >
+        Save
+      </button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+
+
+</html>

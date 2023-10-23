@@ -1,0 +1,14 @@
+{
+    "name": "Timer Zone",
+    "description": "Are you looking for a flexible and user-friendly timer to boost your productivity and manage your time effectively? Look no further! The 'Timer Zone' Chrome extension is your solution. This versatile tool empowers you to take control of your time and adapt it to your unique needs and work style.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action":{
+        "default_popup": "index.html",
+        "default_icon": "./timerLogo.png"
+    },
+    "permissions": ["alarms", "notifications", "storage", "activeTab"],
+    "background": {
+        "service_worker": "background.js"
+      }
+}
